@@ -1,0 +1,43 @@
+package listas;
+
+public class Lista {
+
+	Nodos inicio;
+	
+	public Lista(){
+		inicio = null;
+	}
+	
+	public void insertar(String s){
+		Nodos nuevo = new Nodos(s);
+		if(inicio == null){
+			inicio = nuevo;
+		}else{
+			Nodos aux = inicio;
+			while(aux!= null){
+				if(aux.siguiente == null){
+					aux.siguiente = nuevo;
+					break;
+				}else{
+					aux = aux.siguiente;
+				}
+				
+			}
+			
+		}
+	}
+	
+	public void mostrar(){
+		Nodos aux = inicio;
+		String lista = "";
+		while (aux != null){
+			lista += aux.getNombre() +"->";
+			aux = aux.siguiente;
+		}
+		
+		System.out.println(lista);
+	}
+	
+	
+}
+

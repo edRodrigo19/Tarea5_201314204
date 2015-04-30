@@ -1,0 +1,43 @@
+package listas;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+import javax.swing.text.LayoutQueue;
+
+public class Menu extends JFrame {
+
+	JTextField t = new JTextField();
+	JButton b = new JButton("insertar");
+	Lista lp = new Lista();
+	
+	
+	public Menu(){
+		this.setBounds(100, 100, 250, 100);
+		this.setLayout(null);
+		
+		
+		t.setBounds(10,10,80,30);
+		
+		b.setBounds(100,10,100,30);
+		b.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                lp.insertar(t.getText());
+                lp.mostrar();
+                
+            }
+        });
+		
+		this.add(t);
+		this.add(b);
+	}
+
+	public static void main (String[]args){
+		Menu n = new Menu();
+		n.setVisible(true);
+	}
+	
+	
+}
+

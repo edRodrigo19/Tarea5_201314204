@@ -1,0 +1,32 @@
+package listas;
+
+public class Nodos {
+
+	String Nombre;
+	Nodos siguiente, anterior;
+	
+	public Nodos(){
+		this.Nombre = "";
+		this.siguiente = null;
+		this.anterior = null;
+	}
+	
+	public Nodos(String s){
+		this.Nombre = s;
+		this.siguiente = null;
+		this.anterior = null;
+	}
+	
+	public String getNombre() {
+		return Nombre;
+	}
+	
+	public Nodos getSiguiente() {
+		return siguiente;
+	}
+	
+	public Nodos getAnterior() {
+		return anterior;
+	}
+}
+
